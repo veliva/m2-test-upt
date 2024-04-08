@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="veliva" sortOrder="500">
+            <label>Veliva</label>
+        </tab>
+        <section id="veliva" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+            <label>Logger</label>
+            <tab>veliva</tab>
+            <resource>Veliva_ConfigurableLogger::admin</resource>
+            <group id="general" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                <label>General</label>
+                <field id="enabled" type="select" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+                <field id="filename" type="text" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="20">
+                    <label>Filename</label>
+                    <comment>Log file name in the magento_root/var/log/. For example: veliva.log</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
